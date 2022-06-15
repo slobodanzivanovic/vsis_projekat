@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрација</title>
+  <link rel="stylesheet" href="stilovi/registracija.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="forma">
+    <form class="form" id="form">
+      <div class="input-polja">
+        <label>Име и презиме</label>
+        <input type="text" placeholder="Овде унети име и презиме" name="imeprezime" id="imeprezime1">
+        <label>Имејл</label>
+        <input type="text" placeholder="Овде унети имејл" name="mejl" id="imejl1">
+        <label>Телефон</label>
+        <input type="text" placeholder="Овде унети телефон" name="telefon" id="telefon1">
+        <label>Лозинка</label>
+        <input type="password" placeholder="Овде унети лозинку" name="password1" id="lozinka1">
+        <label>Поновљена лозинка</label>
+        <input type="password" placeholder="Овде унети поновљену лозинку" name="password2" id="lozinka2">
+      </div>
+      <button type="submit">Региструј се</button>
+    </form>
+  </div>
+
+
+  <script>
+    $(function() {
+      $('#imeprezime1').on('blur', function(e) {
+        var provera = /^[A-ZČĆŠĐŽ]{0,1}/.test($(this).val()); // ([a-z]+)\s{0,1}[a-z]{4,180}$
+        if (provera === true) {
+          $(this).css('outline', '0px solid');
+        } else {
+          $(this).css('outline', '4px solid orange');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
