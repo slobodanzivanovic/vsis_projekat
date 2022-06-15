@@ -30,15 +30,22 @@
 
   <script>
     $(function() {
-      $('#imeprezime1').on('blur', function(e) {
-        var provera = /^[A-ZČĆŠĐŽ]{0,1}/.test($(this).val()); // ([a-z]+)\s{0,1}[a-z]{4,180}$
-        if (provera === true) {
-          $(this).css('outline', '0px solid');
-        } else {
-          $(this).css('outline', '4px solid orange');
-        }
-      });
-    });
+  $('#imeprezime1').on('blur', function(e) {
+    var provera = /^[A-ZČĆŠĐŽ]{0,1}([a-z]+)\s+\-[A-Z]{0,1}[a-z]{4,180}$/.test($(this).val());
+    if (provera === true) {
+      $(this).css('outline', '0px solid');
+    } else {
+      $(this).css('outline', '4px solid orange');
+      $(this).after('<span style="color: orange;">Име и презиме није правилно написано</span><br>')
+    }
+  });
+  
+  $('#imeprezime1').on('focus', function(e) {
+      $(this).next("span").remove();
+      $(this).next("br").remove();
+  });
+ 
+});
   </script>
 </body>
 </html>
