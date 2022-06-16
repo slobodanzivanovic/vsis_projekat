@@ -31,7 +31,8 @@
   <script>
     $(function() {
   $('#imeprezime1').on('blur', function(e) {
-    var provera = /^[A-ZČĆŠĐŽ]{0,1}([a-z]+)\s+\-[A-Z]{0,1}[a-z]{4,180}$/.test($(this).val());
+    var provera = /^([A-Za-z]+){0,1},\s+([A-Za-z]+)\s+([A-Za-z]+)?$/.test($(this).val());
+    // /^(([A-Z]))
     if (provera === true) {
       $(this).css('outline', '0px solid');
     } else {
