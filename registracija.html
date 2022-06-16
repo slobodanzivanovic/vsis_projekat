@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Регистрација</title>
   <link rel="stylesheet" href="stilovi/registracija.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="forma">
@@ -26,27 +29,12 @@
       <button type="submit">Региструј се</button>
     </form>
   </div>
-
-
-  <script>
-    $(function() {
-  $('#imeprezime1').on('blur', function(e) {
-    var provera = /^([A-Za-z]+){0,1},\s+([A-Za-z]+)\s+([A-Za-z]+)?$/.test($(this).val());
-    // /^(([A-Z]))
-    if (provera === true) {
-      $(this).css('outline', '0px solid');
-    } else {
-      $(this).css('outline', '4px solid orange');
-      $(this).after('<span style="color: orange;">Име и презиме није правилно написано</span><br>')
-    }
-  });
+  <div class="footer">
+    <h2 class="autor">
+      <a href="https://github.com/slobodanzivanovic">Слободан Живановић И011-24/2019</a>
+    </h2>
+  </div>
   
-  $('#imeprezime1').on('focus', function(e) {
-      $(this).next("span").remove();
-      $(this).next("br").remove();
-  });
- 
-});
-  </script>
+  <script src="skripte/registracija.js"></script>
 </body>
 </html>
