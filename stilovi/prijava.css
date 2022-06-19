@@ -5,53 +5,68 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.forma {
-  background-color: #eee;
-  border: #aaa solid 3px;
-  padding: 20px;
+body {
+  background-color: #724dc2;
 }
 
-.input-polja input {
-  display: inline-block;
+.header {
   width: 100%;
-  margin-bottom: 5px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #966bf3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  border-bottom: #81E6D9 solid 3px;
+  transition: all 0.1s;
 }
 
-button {
-  margin-top: 20px;
-  width: 100%;
-  background: none;
-  border: solid 1px #319795; /*Nisam najbolje razumeo ovaj deo oko bordera ako treba da se skroz ukloni samo kucam border:none (ali ja sam zbog detalja promenio obican border od dugmeta*/
-  color: #805AD5;
-  cursor: pointer;
-  transition: all 0.3s;
+.naslov {
+  text-align: center;
+  color: #81E6D9;
+  font-weight: 700;
 }
 
-button:hover {
-  background-color: #81E6D9;
-  border: 1px solid #2D3748;
-  color: #001100;
-  box-shadow: 0px 8px 15px #319795;
+.nav {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 500px;
+  background-color: rgb(0, 17, 0, 0.4);
+  justify-content: space-evenly;
+  align-items: center;
+  border: 5px solid #81E6D9;
+  border-radius: 5px;
+  transition: all 0.1s;
 }
 
-button:active {
-  box-shadow: 0px 10px 15px #0b4241;
+.nav a {
+  text-decoration: none;
+  color: #81E6D9;
+  border: 2px solid #81E6D9;
+  border-radius: 3px;
+  padding: 10px;
+  font-weight: 700;
+  background-color: rgb(29, 29, 29, 0.6);
+  transition: 0.3s;
+  width: 95%;
+  text-align: center;
 }
 
-@media (min-width: 501px) {
-  .forma {
-    width: 500px;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
+.nav a:hover {
+  border: 2px solid #319795;
+  transform: scale(105%);
+  color: #966bf3;
+  background-color: #000000;
 }
 
-@media (min-width: 500px) {
-  .forma {
-    margin: 0 auto;
-  }
+a:visited, a:active {
+color: #81E6D9;
 }
 
 .footer {
@@ -78,7 +93,24 @@ button:active {
 }
 
 @media (max-width: 501px) {
+  .header {
+    height: 85px;
+  }
+
   .footer {
     height: 60px;
   }
+
+  .nav {
+    top: 52%;
+  }
+}
+
+.naslov1 {
+  color: #81E6D9;
+  text-transform: uppercase;
+  padding: 10px;
+  border: #319795 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
 }

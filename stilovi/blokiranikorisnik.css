@@ -5,6 +5,25 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.naslov {
+  background-color: #966bf3;
+  width: 100%;
+  height: 60px;
+  border-bottom: #81E6D9 solid 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:visited, a:active {
+  color: #81E6D9;
+  }
+
+.naslov>h2 {
+  color: #81E6D9;
+  font-weight: 700;
+}
+
 .forma {
   background-color: #eee;
   border: #aaa solid 3px;
@@ -75,29 +94,10 @@ button:active {
 }
 .autor a {
   text-decoration: none;
-  color: #81E6D9;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
   .footer {
     height: 60px;
   }
-}
-
-a:visited, a:active {
-  color: #81E6D9;
-  }
-.naslov {
-  background-color: #966bf3;
-  width: 100%;
-  height: 60px;
-  border-bottom: #81E6D9 solid 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.naslov>h2 {
-  color: #81E6D9;
-  font-weight: 700;
 }
