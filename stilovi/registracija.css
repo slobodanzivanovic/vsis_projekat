@@ -75,10 +75,19 @@ button:active {
 }
 .autor a {
   text-decoration: none;
+  color: black;
 }
 
 @media (max-width: 500px) {
   .footer {
     height: 60px;
   }
+}
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: black;
 }
